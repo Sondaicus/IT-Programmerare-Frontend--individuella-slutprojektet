@@ -1,0 +1,31 @@
+{
+    "identifyers":
+    {
+        "contact":
+        {
+            "phone": "Mobil",
+            "email": "Epost"
+        }
+    },
+    "values":
+    {
+        "title": "Personligt brev för rollen som",
+        "header": "Jag söker er tjänst som en yrkeshögskoleutbildad mjukvaruutvecklare för att utvecklas inom systemutveckling. Med erfarenhet från Tietoevry där jag arbetat med användarstöd och utveckling av system söker jag rollen som", 
+        "main":
+        {
+            "intro": "Jag anser att er annons med dess beskrivning skulle vara en tjänst som passar mig väldigt bra och där jag även ser att jag kan utvecklas inom mina intresseområden.",
+            "experienceHistory": "Från både min utbildning och min tid hos Tietoevry har jag haft erfarenhet av utveckling med olika tekniker och teknologier,",
+            "currentOccupationLexicon": "Jag går just nu även en vidareutbildning genom arbetsförmedlingen hos företaget Lexicon som fokuserar på frontend utveckling med webbutvecklingsteknologier för att stärka min kunskap"
+        },
+        "footer":
+        {
+            "careerChoices": "Jag är mycket intresserad av programmering så jag känner jag valt rätt framtida karriär och utbildning. I mitt CV står de kurser som ingått i min yrkeshögskoleutbildning, vid förfrågan kan jag bifoga en lista med de flesta teknologier och kunskaper som ingått i respektive kurs ifall mer information önskas.",
+            "personalQualities": "Som person är jag noggrann, pålitlig, och ser alltid fram emot att få bredda mina kunskaper och utvecklas inom mitt område. Jag jobbar alltid på ett strukturerat och agilt sätt med kravanalys för att arbeta så effektivt som möjligt och uppnå bästa resultat."
+        },
+        "closingMessage":
+        {
+            "anticipation": "Jag ser fram emot att höra ifrån er och höra mer om denna spännande roll.",
+            "regards": "Med vänlig hälsning,"
+        }
+    }
+}
