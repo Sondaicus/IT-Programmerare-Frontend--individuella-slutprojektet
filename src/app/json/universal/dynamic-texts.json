@@ -1,0 +1,58 @@
+{
+    "identifyers":
+    {},
+    "values":
+    {
+        "techniques":
+        {
+            "databases": 
+            {
+                "sql": "SQL",
+                "mysql": "MySQL", 
+                "msSqlServer": "Microsoft SQL Server",
+                "json": "JSON"
+            },
+            "agile": 
+            {
+                "scrum": "Scrum",
+                "jira": "Jira",
+                "confluence": "Confluence",
+                "solid": "SOLID",
+                "ooad": "OOAD",
+                "oop": "OOP",
+                "kanban": "Kanban"
+            },
+            "versionControl": 
+            {
+                "git": "Git",
+                "gitHub": "Github",
+                "bitbucket": "Bitbucket",
+                "azureDevops": "Azure DevOps"
+            },
+            "web":
+            {
+                "html": "HTML",
+                "css": "CSS",
+                "javascript": "JavaScript",
+                "TypeScript": "TypeScript", 
+                "sass": "Sass", 
+                "angular": "Angular", 
+                "nodeJs": "Node.js", 
+                "nextJs": "Next.js", 
+                "react": "React"
+            },
+            "test":
+            {
+                "tdd": "TDD"
+            },
+            "java":
+            {
+
+            },
+            "net":
+            {
+                
+            }
+        }
+    }
+}
