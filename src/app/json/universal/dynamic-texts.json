@@ -34,7 +34,7 @@
                 "html": "HTML",
                 "css": "CSS",
                 "javascript": "JavaScript",
-                "TypeScript": "TypeScript", 
+                "typescript": "TypeScript", 
                 "sass": "Sass", 
                 "angular": "Angular", 
                 "nodeJs": "Node.js", 
@@ -47,11 +47,26 @@
             },
             "java":
             {
-
+                "java": "Java",
+                "javaSe": "Java SE",
+                "javaEe": "Java EE"
             },
             "net":
             {
-                
+                "net": ".NET",
+                "c#": "C#",
+                "msVS": "Microsoft Visual Studio"
+            },
+            "api":
+            {
+                "rest": "REST API"
+            },
+            "container":
+            {
+                "docker": "Docker",
+                "kubernetes": "Kubernetes",
+                "cicd": "CI/CD",
+                "pipelines": "Pipelines"
             }
         }
     }
