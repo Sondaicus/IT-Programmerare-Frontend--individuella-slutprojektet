@@ -1,8 +1,13 @@
-export default function MainField()
+import unwrapObject from "@/app/ts/unwrap-object";
+
+export default function MainField(plMain)
 {
+    let wrappNames = ["plData", "plMain"];
+    let uwPlMain = unwrapObject(plMain, wrappNames)
+
     return (
         <div className="main-field">
-            <p>Jag anser att er annons med dess beskrivning skulle vara en tjänst som passar mig väldigt bra och där jag även ser att jag kan utvecklas inom mina intresseområden. Min största erfarenhet av programmering ligger inom Java då det är det som jag utbildats till i största grad, men jag har även förutom mina kunskaper inom Java och liknande teknologier erfarenhet inom .NET/C# med Microsoft Visual Studio från viss egen utveckling på min egen fritid, kunskap från komvuxutbildning inom programmering, samt så har jag även arbetat med .NET under min tid hos Tietoevry för det projekt jag var en del av. Från både min utbildning och min tid hos Tietoevry har jag haft erfarenhet av utveckling med olika tekniker och teknologier, databaser (SQL, MySQL, Microsoft SQL Server, textbaserade databaser, JSON), agil utveckling (Scrum, Jira, Confluence, SOLID, OOAD, OOP, Kanban), webbutveckling (HTML, CSS, JavaScript, TypeScript, Sass, Angular, Node.js, m.m.), versionshantering (Git, GitHub, Bitbucket, Azure DevOps), testdriven utveckling (TDD), att bygga program från grunder med designbeslut fram till slutgiltig produkt i team, samt en del arbete med Docker från min utbildning. Jag går just nu även en vidareutbildning genom arbetsförmedlingen hos företaget Lexicon som fokuserar på frontend utveckling med webbutvecklingsteknologier för att stärka min kunskap, där utöver de tekniker som redan nämnts ingår även React och Next.js.</p>
+            <p>{uwPlMain.main}</p>
         </div>
     );
 }
