@@ -1,8 +1,13 @@
-export default function HeaderField()
+import unwrapObject from "@/app/ts/unwrap-object";
+
+export default function HeaderField(plHeader)
 {
+    let wrappNames = ["plData", "plHeader"];
+    let uwPlHeader = unwrapObject(plHeader, wrappNames)
+
     return (
         <div className="header-field">
-            <p>Jag söker er tjänst som en yrkeshögskoleutbildad mjukvaruutvecklare för att utvecklas inom systemutveckling. Med erfarenhet från Tietoevry där jag arbetat med användarstöd och utveckling av system söker jag rollen som $#%@¤.</p>
+            <p>{uwPlHeader.header}</p>
         </div>
     );
 }

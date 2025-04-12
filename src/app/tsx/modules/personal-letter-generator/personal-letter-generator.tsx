@@ -5,22 +5,26 @@ import HeaderField from "@/app/tsx/modules/personal-letter-generator/header-fiel
 import MainField from "@/app/tsx/modules/personal-letter-generator/main-field";
 import FooterField from "@/app/tsx/modules/personal-letter-generator/footer-field";
 import ClosingMessageField from "@/app/tsx/modules/personal-letter-generator/closing-message-field";
+import unwrapObject from "@/app/ts/unwrap-object";
 
-export default function PersonalLetterGenerator()
+export default function PersonalLetterGenerator(plData)
 {
+    let wrappNames = ["plData"];
+    let uwPlData = unwrapObject(plData, wrappNames);
+
     return (
         <div className="personal-letter-generator_spacer">
             <div className="personal-letter-generator_content">
-                <ContactInfoField />
+                <ContactInfoField plContactInfo={uwPlData.plContactInfo} />
                 <EmptyLine />
-                <TitleField />
-                <HeaderField />
+                <TitleField plTitle={uwPlData.plTitle} />
+                <HeaderField plHeader={uwPlData.plHeader} />
                 <EmptyLine />
-                <MainField />
+                <MainField plMain={uwPlData.plMain} />
                 <EmptyLine />
-                <FooterField />
+                <FooterField plFooter={uwPlData.plFooter} />
                 <EmptyLine />
-                <ClosingMessageField />
+                <ClosingMessageField plClosingMessage={uwPlData.plClosingMessage} />
             </div>
         </div>
     );

@@ -1,11 +1,16 @@
-export default function ContactInfoField()
+import unwrapObject from "@/app/ts/unwrap-object";
+
+export default function ContactInfoField(plContactInfo)
 {
+    let wrappNames = ["plData", "plContactInfo"];
+    let uwPlContactInfo = unwrapObject(plContactInfo, wrappNames);
+
     return (
         <div className="contact-info-field">
-            <p className="contact-info-name">Axel Reje</p>
-            <p>https://www.linkedin.com/in/axel-reje-5ba0411b7/</p>
-            <p>Mobil: +46 070 748 79 70</p>
-            <p>E-post: axelreje@hotmail.com</p>
+            <p className="contact-info-name">{uwPlContactInfo.name}</p>
+            <p>{uwPlContactInfo.linkedIn}</p>
+            <p>{uwPlContactInfo.phone}</p>
+            <p>{uwPlContactInfo.email}</p>
         </div>
     );
 }
