@@ -1,0 +1,62 @@
+{
+    "identifyers":
+    {
+        "contact":
+        {
+            "phone": "Mobil",
+            "email": "Epost"
+        }
+    },
+    "values":
+    {
+        "main":
+        {
+            "techniques":
+            {
+                "databases": "databaser",
+                "agile": "agil utveckling",
+                "versionControl": "versionshantering",
+                "web": "webbutveckling",
+                "test":
+                {
+                    "tdd": "testdriven utveckling",
+                    "unitTesting": "enhetstestning"
+                },
+                "java":
+                {
+                    "java": "Java",
+                    "javaSe": "Java SE",
+                    "javaEe": "Java EE"
+                },
+                "net":
+                {
+                    "net": ".NET",
+                    "c#": "C#",
+                    "msVS": "Microsoft Visual Studio"
+                },
+                "api":
+                {
+                    "rest": "REST API"
+                },
+                "container":
+                {
+                    "docker": "Docker",
+                    "kubernetes": "Kubernetes",
+                    "cicd": "CI/CD",
+                    "pipelines": "Pipelines"
+                }
+            },
+            "experiences":
+            {
+                "projectDesignTeam": "att bygga program från grunder med designbeslut fram till slutgiltig produkt i team",
+                "asWellAsSomeWork": "samt en del arbete",
+                "with": "med",
+                "fromMyEducation": "från min utbildning"
+            }
+        },
+        "footer":
+        {
+            "diploma": " Jag kan även vid förfrågan bifoga mitt examensbevis som beskriver utbildningens innehåll."
+        }
+    }
+}

@@ -79,8 +79,6 @@ main
 
 .personal-letter-generator_content
 {
-  width: 100%;
-  height: 100%;
   width: calc(100% - 5cm);
   height: calc(100% - 5cm);
   top: 2.5cm;
