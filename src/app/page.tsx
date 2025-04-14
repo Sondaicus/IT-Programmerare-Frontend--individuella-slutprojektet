@@ -1,17 +1,25 @@
 import Header from "@/app/tsx/document-body-sections/header";
 import Main from "@/app/tsx/document-body-sections/main";
 import Footer from "@/app/tsx/document-body-sections/footer";
-import { useContext } from 'react';
-import {fetchLanguageStatic , fetchLanguageDynamic , fetchUniversalStatic , fetchUniversalDynamic} from "@/app/ts/read-apis";
 
-export default function Home() 
+export default async function Home(
+  {searchParams,}: 
+  {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  }
+) 
 {
-
+  const {placeholderTitle = "$#%@¤" , chosenLanguage = "swedish" , techKeyWords = [] , phraseKeyWords = [] , mentionDiploma = ""} = await searchParams;
+  const title = Array.isArray(placeholderTitle) ? placeholderTitle[0] : placeholderTitle;
+  const language = Array.isArray(chosenLanguage) ? chosenLanguage[0] : chosenLanguage;
+  const parsedMentionDiploma = mentionDiploma === "true";
+  
+  const plParamsData = { title , language , techKeyWords , phraseKeyWords , parsedMentionDiploma};
 
   return (
     <body>
       <Header />
-      <Main />
+      <Main plParamsData={plParamsData} />
       <Footer />
     </body>
   );
