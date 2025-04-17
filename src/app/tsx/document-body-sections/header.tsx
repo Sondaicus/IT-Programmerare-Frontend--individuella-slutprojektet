@@ -1,29 +1,18 @@
 "use client"
 
-import {fetchLanguageStatic , fetchLanguageDynamic , fetchUniversalStatic , fetchUniversalDynamic} from "@/app/ts/read-apis";
-import { usePathname, useSearchParams , useRouter } from "next/navigation";
-import * as router from "next/router";
 import React from "react";
-
+import HeaderLeftSide from "@/app/tsx/modules/header-left-side";
+import HeaderRightSide from "@/app/tsx/modules/header-right-side";
 
 export default function Header()
 {
-    const router = useRouter()
-    const pathname = usePathname()
-    const searchParams = useSearchParams()
-
-    
 
     return (
         <header>
-            <button
-        onClick={() => {
-          // <pathname>?sort=asc
-          router.push(pathname + '?' + "language=swedish")
-        }}
-      >
-        ASC
-      </button>
+            <section className="header-section-content-field">
+                <HeaderLeftSide />
+                <HeaderRightSide />
+            </section>
         </header>
     );
 }

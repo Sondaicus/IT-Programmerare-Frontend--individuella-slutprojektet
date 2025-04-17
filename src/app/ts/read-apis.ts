@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { getProperFilePathInScript , jsonifyStringContent } from '@/app/ts/file-modifying-functions';
+import { getProperFilePathInScript , jsonifyStringContent } from '@/app/ts/variable-modifying-functions';
 
 export function fetchLanguageStatic(languageHref : string) 
 {

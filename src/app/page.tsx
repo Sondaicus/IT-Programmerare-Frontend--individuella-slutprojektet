@@ -12,12 +12,20 @@ export default async function Home(
   const {placeholderTitle = "$#%@¤" , chosenLanguage = "swedish" , techKeyWords = [] , phraseKeyWords = [] , mentionDiploma = ""} = await searchParams;
   const title = Array.isArray(placeholderTitle) ? placeholderTitle[0] : placeholderTitle;
   const language = Array.isArray(chosenLanguage) ? chosenLanguage[0] : chosenLanguage;
-  const parsedMentionDiploma = mentionDiploma === "true";
+  const diploma = mentionDiploma === "true";
   
-  const plParamsData = { title , language , techKeyWords , phraseKeyWords , parsedMentionDiploma};
+  const plParamsData = { title , language , techKeyWords , phraseKeyWords , diploma };
+
+  console.log(plParamsData);
+
+  function stopPropogation(event)
+  {
+    event.stopPropagation();
+  }
+
 
   return (
-    <body>
+    <body /*onClick={() => stopPropogation(event)}*/>
       <Header />
       <Main plParamsData={plParamsData} />
       <Footer />
