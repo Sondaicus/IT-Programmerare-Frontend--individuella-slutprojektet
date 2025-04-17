@@ -5,7 +5,7 @@ import HeaderField from "@/app/tsx/modules/personal-letter-generator/header-fiel
 import MainField from "@/app/tsx/modules/personal-letter-generator/main-field";
 import FooterField from "@/app/tsx/modules/personal-letter-generator/footer-field";
 import ClosingMessageField from "@/app/tsx/modules/personal-letter-generator/closing-message-field";
-import unwrapObject from "@/app/ts/unwrap-object";
+import { unwrapObject } from "@/app/ts/variable-modifying-functions";
 
 export default function PersonalLetterGenerator(plData)
 {

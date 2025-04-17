@@ -54,7 +54,7 @@ body {
 header
 {
   width: 100vw;
-  height: 600px;
+  height: 300px;
   background-color: rgb(255, 0, 0);
 }
 
@@ -126,3 +126,108 @@ main
     width: max-content;
   }
 }
+
+.header-section-content-field
+{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  height: 100%;
+  width: 1015px;
+
+  background-color: rgb(136, 192, 189);
+}
+
+.header-left-side
+{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  height: 100%;
+  width: 100%;
+
+  background-color: chartreuse;
+}
+
+.header-right-side
+{
+  height: 100%;
+  width: 100%;
+
+  background-color: rgb(251, 255, 0);
+}
+
+.user-input-field
+{
+  background-color: var(--background);
+  width: min-content;
+}
+
+.checkbox-button
+{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.dropdown-menu
+{
+  background-color: darkorange;
+  width: 200px;
+  height: 75px;
+
+
+}
+
+.dropdown-button
+{
+  height: 33%;
+  width: 100%;
+  background-color: maroon;
+}
+
+.dropdown-content
+{
+  display: grid;
+  grid-template-columns: auto;
+  
+  height: 67%;
+
+  background-color: rgb(66, 114, 106);
+}
+
+.hidden-content
+{
+  display: none;
+}
+
+.shown-content
+{
+  display: inline;
+}
+
+.dropdown-link
+{
+  width: 100%;
+  height: 100%;
+  background-color: deepskyblue;
+}
+
+.dropdown-link-content
+{
+  display: grid;
+  grid-template-columns: auto;
+  height: 100%;
+  width: 100%;
+  background-color: gold;
+}
+
+.dropdown-link:hover, .dropdown-link-content:hover
+{
+  background-color: #ddd;
+}
+
+
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

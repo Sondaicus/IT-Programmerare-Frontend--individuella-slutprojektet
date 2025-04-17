@@ -1,4 +1,4 @@
-import unwrapObject from "@/app/ts/unwrap-object";
+import { unwrapObject } from "@/app/ts/variable-modifying-functions";
 
 export default function ContactInfoField(plContactInfo)
 {
