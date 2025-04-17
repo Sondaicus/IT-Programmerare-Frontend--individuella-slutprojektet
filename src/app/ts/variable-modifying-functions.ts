@@ -58,6 +58,36 @@ export function booleanifyStringContent(stringValue : string)
     }
 }
 
+export function searchParamsCheckParamPresent(collectedFullPathName : string, paramName : string)
+{
+    let paramPresent : boolean = false;
+    let paramNameIdentifyer : string = paramName + "=";
+    let paramNameIdentifyerIndex : number = collectedFullPathName.indexOf(paramNameIdentifyer);
+
+    if(paramNameIdentifyerIndex != -1)
+    {
+        paramPresent = true; 
+    }
+
+    return paramPresent;
+}
+
+export function searchParamsGetOldKeyValue(collectedFullPathName : string, paramName : string)
+{
+    let paramNameIdentifyer : string = paramName + "=";
+    let paramNameIdentifyerIndex : number = collectedFullPathName.indexOf(paramNameIdentifyer);
+    let paramNameUrlIndexEnd : number = collectedFullPathName.substring(paramNameIdentifyerIndex).indexOf("&");
+
+    if(paramNameUrlIndexEnd == -1)
+    {
+        paramNameUrlIndexEnd = collectedFullPathName.length;
+    }
+
+    let oldKeyValue : string = collectedFullPathName.substring((paramNameIdentifyerIndex + paramNameIdentifyer.length), paramNameUrlIndexEnd);
+
+    return oldKeyValue;
+}
+
 export function getFullPathname(searchParams, pathname)
 {
     let returnValue : string;

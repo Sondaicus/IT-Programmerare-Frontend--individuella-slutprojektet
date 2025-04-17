@@ -2,21 +2,48 @@
 
 import { usePathname, useSearchParams , useRouter } from "next/navigation";
 import React from "react";
-import { getCorrectUrlPushPath , switchClassNameValues } from "@/app/ts/variable-modifying-functions";
+import { getCorrectUrlPushPath , switchClassNameValues , getFullPathname, searchParamsCheckParamPresent , searchParamsGetOldKeyValue } from "@/app/ts/variable-modifying-functions";
+import { useReducer } from 'react';
 
 export default function LanguageSelect()
 {
+    const [, forceUpdate] = useReducer(x => x + 1, 0);
+
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
     let paramName : string = "chosenLanguage";
-    let languageValue : string = "";
+    let languageValue : string = "Välj språk";
+    showcaseChosenLanguage();
 
-    console.log(searchParams);
+    function showcaseChosenLanguage()
+    {
+        let collectedFullPathName : string = getFullPathname(searchParams, pathname);
+        let languageValueIsPresent : boolean = searchParamsCheckParamPresent(collectedFullPathName , paramName);
+
+        console.log(languageValueIsPresent);
+
+        if(languageValueIsPresent)
+        {
+            let urlLanguageValue : string = searchParamsGetOldKeyValue(collectedFullPathName, paramName);
+
+            console.log(urlLanguageValue);
+
+            if(urlLanguageValue == "swedish")
+            {
+                languageValue = "Svenska";
+            }
+            else if(urlLanguageValue == "english")
+            {
+                languageValue = "Engelska";
+            }
+        }
+    }
 
     function selectChosenLanguage(chosenLanguage : string)
     {
-           console.log(chosenLanguage);
+           router.push(getCorrectUrlPushPath(searchParams, pathname, paramName, chosenLanguage));
+           forceUpdate();
     }
 
     function openDropdownLanguageMenu(event)
@@ -50,7 +77,7 @@ export default function LanguageSelect()
     return (
         <div>
             <div className="dropdown-menu">
-                <button className="dropdown-button" onClick={() => openDropdownLanguageMenu(event)}>Välj språk</button>
+                <button className="dropdown-button" onClick={() => openDropdownLanguageMenu(event)}>{languageValue}</button>
                 <div className="dropdown-content">
                     <div className="hidden-content dropdown-link" onClick={() => [selectChosenLanguage("swedish"), openDropdownLanguageMenu(event)]}>
                         <div className="dropdown-link-content">
