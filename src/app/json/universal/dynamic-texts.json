@@ -43,7 +43,8 @@
             },
             "test":
             {
-                "tdd": "TDD"
+                "tdd": "TDD",
+                "junit": "JUnit"
             },
             "java":
             {

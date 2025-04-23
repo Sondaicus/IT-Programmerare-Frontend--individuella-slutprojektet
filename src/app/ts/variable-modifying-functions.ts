@@ -236,3 +236,54 @@ export function fullyDeleteStringContentReference(stringMainContent : string, st
 
     return stringMainContent;
 }
+
+export function getSourceElementParentByClassName(sourceElement, parentCLassName : string)
+{
+    let sourceParentElement = sourceElement;
+
+    while(sourceParentElement.className != parentCLassName)
+    {
+        sourceParentElement = sourceParentElement.parentElement;
+    }
+
+    return sourceParentElement;
+}
+
+export function getSourceElementChildByClassName(sourceElement, childCLassName : string)
+{
+    let sourceChildElement = sourceElement;
+
+    if(sourceChildElement.className != childCLassName)
+    {
+        for(let i_0 = 0; i_0 < sourceChildElement.children.length; i_0++)
+        {
+            let currentChildElement = sourceChildElement.children[i_0];
+
+            if(currentChildElement.className == childCLassName)
+            {
+                sourceChildElement = currentChildElement;
+                break;
+            }
+        }
+    }
+
+    if(sourceChildElement.className != childCLassName)
+    {
+        for(let i_0 = 0; i_0 < sourceElement.children.length; i_0++)
+        {
+            sourceChildElement = getSourceElementChildByClassName(sourceElement.children[i_0], childCLassName);
+
+            if(sourceChildElement.className == childCLassName)
+            {
+                break;
+            }
+        }
+    }
+
+    if(sourceChildElement.className != childCLassName)
+    {
+        sourceChildElement = sourceElement;
+    }
+
+    return sourceChildElement;
+}

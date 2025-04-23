@@ -18,10 +18,6 @@ export default async function Home(
 
   console.log(plParamsData);
 
-  function stopPropogation(event)
-  {
-    event.stopPropagation();
-  }
 
 
   return (

@@ -7,8 +7,6 @@ import { useReducer } from 'react';
 
 export default function LanguageSelect()
 {
-    const [, forceUpdate] = useReducer(x => x + 1, 0);
-
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -21,13 +19,9 @@ export default function LanguageSelect()
         let collectedFullPathName : string = getFullPathname(searchParams, pathname);
         let languageValueIsPresent : boolean = searchParamsCheckParamPresent(collectedFullPathName , paramName);
 
-        console.log(languageValueIsPresent);
-
         if(languageValueIsPresent)
         {
             let urlLanguageValue : string = searchParamsGetOldKeyValue(collectedFullPathName, paramName);
-
-            console.log(urlLanguageValue);
 
             if(urlLanguageValue == "swedish")
             {
@@ -43,7 +37,6 @@ export default function LanguageSelect()
     function selectChosenLanguage(chosenLanguage : string)
     {
            router.push(getCorrectUrlPushPath(searchParams, pathname, paramName, chosenLanguage));
-           forceUpdate();
     }
 
     function openDropdownLanguageMenu(event)
@@ -52,6 +45,7 @@ export default function LanguageSelect()
 
         while(dropdownMenu.className != "dropdown-menu")
         {
+            console.dir(dropdownMenu);
             dropdownMenu = dropdownMenu.parentElement;
         }
 
