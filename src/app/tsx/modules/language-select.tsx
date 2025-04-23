@@ -45,6 +45,7 @@ export default function LanguageSelect()
 
         while(dropdownMenu.className != "dropdown-menu")
         {
+            console.dir(dropdownMenu);
             dropdownMenu = dropdownMenu.parentElement;
         }
 
